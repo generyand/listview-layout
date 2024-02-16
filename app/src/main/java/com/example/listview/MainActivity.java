@@ -9,11 +9,11 @@ public class MainActivity extends AppCompatActivity {
 
     private String[] nameList = {
             "Chloe Kim",
-            "Granville C. Jones",
-            "Magan D. Oliver",
-            "Joan M. Logan",
-            "Carol T. Watson",
-            "Gregory J. Walls",
+            "Granville Jones",
+            "Magan Oliver",
+            "Joan Logan",
+            "Carol Watson",
+            "Gregory Walls",
             "Alice Johansson",
             "Aisha Kapoor",
             "Mateo Garcia",
@@ -28,6 +28,29 @@ public class MainActivity extends AppCompatActivity {
             "Benjamin Lee",
             "Noah Davies",
             "Lucas Brown"
+    };
+
+    private String[] email = {
+            "chloe.kim@gmail.com",
+            "granville.jones@gmail.com",
+            "magan.oliver@gmail.com",
+            "joan.logan@gmail.com",
+            "carol.watson@gmail.com",
+            "gregory.walls@gmail.com",
+            "alice.johansson@gmail.com",
+            "aisha.kapoor@gmail.com",
+            "mateo.garcia@gmail.com",
+            "ethan.walker@gmail.com",
+            "luna.sanchez@gmail.com",
+            "liam.oconnor@gmail.com",
+            "maya.nguyen@gmail.com",
+            "oliver.schmidt@gmail.com",
+            "ava.tanaka@gmail.com",
+            "emilia.wright@gmail.com",
+            "sofia.miller@gmail.com",
+            "benjamin.lee@gmail.com",
+            "noah.davies@gmail.com",
+            "lucas.brown@gmail.com"
     };
 
     int[] pics_contact = {
@@ -59,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ListView data_list = (ListView) findViewById(R.id.Datalist);
-        CustomAdapter base = new CustomAdapter(nameList, pics_contact, this);
+        CustomAdapter base = new CustomAdapter(nameList, email, pics_contact, this);
         data_list.setAdapter(base);
 
     }

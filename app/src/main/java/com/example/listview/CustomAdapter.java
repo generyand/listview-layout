@@ -14,10 +14,13 @@ public class CustomAdapter extends BaseAdapter {
 
     private String[] nameList;
 
+    private String[] email;
+
     Context context;
 
-    public CustomAdapter(String[] nameList, int[] pics_Contact, Context context) {
+    public CustomAdapter(String[] nameList, String[] email, int[] pics_Contact, Context context) {
         this.nameList = nameList;
+        this.email = email;
         this.pics_Contact = pics_Contact;
         this.context = context;
     }
@@ -44,9 +47,11 @@ public class CustomAdapter extends BaseAdapter {
 
         ImageView image = (ImageView) view.findViewById(R.id.contact_pic);
         TextView contactName = (TextView) view.findViewById(R.id.text_data);
+        TextView emailAddress = (TextView) view.findViewById(R.id.text_data2);
 
         image.setImageResource(pics_Contact[position]);
         contactName.setText(nameList[position]);
+        emailAddress.setText(email[position]);
 
         return view;
     }
